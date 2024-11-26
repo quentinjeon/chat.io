@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}대화 기록{% endblock %}
+
+{% block content %}
+<h1>대화 기록</h1>
+<a href="/download" class="button">대화 기록 다운로드</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>사용자 입력</th>
+            <th>응답 1</th>
+            <th>응답 2</th>
+            <th>응답 3</th>
+            <th>생성 시간</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for chat in history %}
+        <tr>
+            <td>{{ chat.user_input }}</td>
+            <td>{{ chat.response_1 }}</td>
+            <td>{{ chat.response_2 }}</td>
+            <td>{{ chat.response_3 }}</td>
+            <td>{{ chat.created_at }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

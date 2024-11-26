@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}홈{% endblock %}
+
+{% block content %}
+<div id="chat-container">
+    <div id="chat-left">
+        <h3>ChatGPT A</h3>
+        <textarea id="user-input" placeholder="메시지를 입력하세요"></textarea>
+        <button id="send-button">Send</button>
+    </div>
+    <div id="chat-right">
+        <h3>예상 응답</h3>
+        <ul id="response-list"></ul>
+    </div>
+</div>
+{% endblock %}
